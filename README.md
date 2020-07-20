@@ -26,8 +26,9 @@ Airdrop Telegram bot using javascript and firebase real time database
 
    1. Telegram Access Token
 
-   ```javascript
-      var token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```javascript
+    var token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
 
    2. Firebase Configuration
 
@@ -38,7 +39,12 @@ Airdrop Telegram bot using javascript and firebase real time database
         databaseURL: "https://XXXXXXXXX.firebaseio.com/",
         projectId: "XXXXXXXX",
         storageBucket: "XXXXXXXXXXXX.appspot.com",
+        messagingSenderId: "XXXXXXXXXXXXX",
+        appId: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        measurementId: "X-XXXXXXXXX"
      };
+```
+
 3. Run the command below to start chatting with the bot
     $ node index
 4. To run it on server go to a VPS and make it happen
