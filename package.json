@@ -1,0 +1,21 @@
+{
+    "name": "airdrop-telegram-bot",
+    "version": "1.0.0",
+    "description": "Airdrop Telegram bot using javascript and firebase real time database",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "author": "Jordan Muthemba",
+    "license": "ISC",
+    "dependencies": {
+        "firebase": "^5.0.4",
+        "node-telegram-bot-api": "^0.30.0",
+        "request": "^2.87.0",
+        "s": "^0.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.17.5"
+    }
+}
