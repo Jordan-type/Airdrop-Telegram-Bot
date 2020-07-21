@@ -19,6 +19,18 @@ Airdrop Telegram bot using javascript and firebase real time database
 
 ## Getting Started
 
+Step: 1
+
+1. Create a Telegram bot at (@BotFather) <https://telegram.me/BotFather> and follow a few simple steps. Once you've created a bot and received your authorization token copy and keep it safe you will need it later.
+2. Setup a unique bot name and must end with bot aslo you can set a description and a bot image as you desire.
+
+3. On your code place this
+
+```javascript
+    const img_url = 'https://res.cloudinary.com/dbfydlpwo/image/upload/v1595278068/Airdrop-Telegram-Bot_oyxox2.jpg'
+    ```
+step: 2
+
 1. Run the command below to install dependencies.
    $ npm install
 2. Create a firebase project
@@ -45,9 +57,9 @@ Airdrop Telegram bot using javascript and firebase real time database
      };
 ```
 
-3. Run the command below to start chatting with the bot
+4. Run the command below to start chatting with the bot
     $ node index
-4. To run it on server go to a VPS and make it happen
+5. To run it on server go to a VPS and make it happen
 
 MIT License
 
