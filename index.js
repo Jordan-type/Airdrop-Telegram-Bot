@@ -69,7 +69,7 @@ bot.on('message', (msg) => {
     }
 });
 // Options for the user to fill
-// Step 1 -Option
+// Step 1 -Option +1(901)591-3110
 bot.on('message', (msg) => {
     var send_txt = msg.text;
     var step1_txt = '1. Join Telegram group';
@@ -180,44 +180,44 @@ bot.on('message', (msg) => {
     if (send_txt.toString().indexOf(step7_txt) === 0) {
         bot.sendMessage(msg.chat.id, "Make sure that you have an ERC20 wallet (0x) 🔑");
     }
-    var re_eth = /^0x[a-fA-F0-9]{40}$/g;
+    var re_eth = /^0x[a-fA-F0-9]{40}$/g
     if (re_eth.test(send_txt)) {
         e_wallet = send_txt;
         bot.sendMessage(msg.chat.id, 'Confirm❓', {
             reply_markup: {
                 keyboard: [
-                    [{ text: 'Yes✅' }],
-                    [{ text: 'Cancel❌' }]
+                    [{ "text": "Yes ✅" }],
+                    [{ "text": "Cancel ❌" }]
                 ],
                 resize_keyboard: true
             }
         })
-        var confirm = 'Yes✅';
-        if (send_txt.toString().indexOf(confirm) === 0) {
-            var db = firebase.database().ref();
-            db.child(e_wallet.toLocaleLowerCase()).once('value', snap => {
-                if (!snap.exists()) {
-                    db.child(e_wallet.toLocaleLowerCase()).update({
-                        telegram_username: t_username,
-                        email: u_email,
-                        mobilenumber: t_mobileno,
-                        wallet: e_wallet.toLocaleLowerCase(),
-                        status: 'pending',
-                        createAt: Date.now()
-                    }).then(() => {
-                        bot.sendMessage(msg.chat.id, "Thank'you 🙏🙏 \n");
-                        bot.sendMessage(msg.chat.id, `Telegram username: ${t_username} \n Email: ${u_email} \n Ethereum wallet: ${e_wallet} \n Visit https://ubricoin.com for more.\n`).then(() => {})
-                    }).catch((err) => {
-                        console.log(err)
-                    })
-                } else {
-                    bot.sendMessage(msg.chat.id, 'This wallet is already in use');
-                }
-            })
-        }
-        var cancel = 'Cancel❌';
-        if (send_txt.toString().indexOf(cancel) === 0) {
-            bot.sendMessage(msg.chat.id, "Good bye ✌️✌️");
-        }
+    }
+    var confirm = 'Yes ✅';
+    if (send_txt.toString().indexOf(confirm) === 0) {
+        var db = firebase.database().ref();
+        db.child(e_wallet.toLocaleLowerCase()).once('value', snap => {
+            if (!snap.exists()) {
+                db.child(e_wallet.toLocaleLowerCase()).update({
+                    telegram_username: t_username,
+                    email: u_email,
+                    mobilnumber: t_mobileno,
+                    wallet: e_wallet.toLocaleLowerCase(),
+                    status: 'Pending',
+                    createAt: Date.now()
+                }).then(() => {
+                    bot.sendMessage(msg.chat.id, "Thank'you 🙏🙏 \n You have earned 50 UBNs 🎊🎊 \n Wait Until airdrop end...");
+                    bot.sendMessage(msg.chat.id, `Telegram username: ${t_username} \n Email: ${u_email} \n Ethereum wallet: ${e_wallet} \n Visit https://ubricoin.com for more.\n`).then(() => {})
+                }).catch((err) => {
+                    console.log(err)
+                })
+            } else {
+                bot.sendMessage(msg.chat.id, "This wallet is already in use!!");
+            }
+        })
+    }
+    var cancel = 'Cancel ❌';
+    if (send_txt.toString().indexOf(cancel) === 0) {
+        bot.sendMessage(msg.chat.id, "Good bye ✌️✌️");
     }
 });
