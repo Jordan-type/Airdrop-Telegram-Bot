@@ -28,7 +28,8 @@ Step: 1
 
 ```javascript
     const img_url = 'https://res.cloudinary.com/dbfydlpwo/image/upload/v1595278068/Airdrop-Telegram-Bot_oyxox2.jpg'
-    ```
+```
+
 step: 2
 
 1. Run the command below to install dependencies.
@@ -39,7 +40,7 @@ step: 2
    1. Telegram Access Token
 
 ```javascript
-    var token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+   var token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
    2. Firebase Configuration
